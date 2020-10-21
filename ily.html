@@ -6,12 +6,12 @@
 </head>
 <body style="background-color: black; background-size: cover;">
 <style type="text/css">
-	.title {
-		color: white;
-	}
+	.transition {
+		transition: all 0.3s ease-in-out;
+	} 
 </style>
-<h1 id="title" style="color: white; text-align: center;">...?</h1>
-<button style="text-align: center;" type="button" onclick="myFunction()" id="button">Yes</button>
+<h1 class="transition" id="title" style="color: white; text-align: center;">...?</h1>
+<button style="text-align: center;" class="transition" type="button" onclick="myFunction()" id="button">Yes</button>
 <audio id="myAudio">
   <source src="noidea.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
@@ -27,7 +27,6 @@ function myFunction() {
   x.play()
 document.title = "Hello";
 y.parentNode.removeChild(y);
-document.write("<h1 class="">I love you <3</h1>")
 z.parentNode.removeChild(z); 
 }
 
