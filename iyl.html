@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hi i guess</title>
+	<link rel="icon" type="icon/image" href="assets/images/favicon.ico">
+</head>
+<body style="background-color: black; background-size: cover;">
+
+<h1 id="title" style="color: white; text-align: center;">...?</h1>
+<button style="text-align: center;" type="button" onclick="myFunction()" id="button">Yes</button>
+<audio id="myAudio">
+  <source src="noidea.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+var x = document.getElementById("myAudio"); 
+var y = document.getElementById("title")
+var z = document.getElementById("button");
+
+
+function myFunction() {
+  x.play()
+document.title = "Hello";
+y.parentNode.removeChild(y);
+document.write("<h1 style="color: white";>I love you <3</h1>")
+z.parentNode.removeChild(z); 
+}
+
+</script>
+
+</body>
+</html>
