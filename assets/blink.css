@@ -1,0 +1,22 @@
+@keyframes blink {
+   5% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   10% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+   15% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+   20% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   25% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   30% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+   35% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   40% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+   45% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   50% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+   55% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   60% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   65% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+   70% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   75% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   80% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+   85% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+   90% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+   95% {color: var(--title-shadow-color-on); text-shadow: 1px 1px 5px var(--title-shadow-color-on);}
+   100% {color: var(--title-shadow-color-off); text-shadow: 1px 1px 5px var(--title-shadow-color-off);}
+}

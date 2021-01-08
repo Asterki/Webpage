@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
-	<title>404 page not found</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="./assets/404.css">
+	<title>Page not found | Asterki</title>
+    <link rel="icon" type="png/image" href="./assets/icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background-image: url(assets/images/bg.jpg); background-size: cover;">
-	<div class="header container">
-	<h1 style="color: white; text-align: center;">404 page not found</h1>
-  	<p style="font-family: arial; color: white; font-size: 40px; text-align: center; text-shadow: 2px 2px 5px black">Looks like the page you we're seaching fo doesn't exist or is unable</p>
-  	</div>
-  	<a href="index"><p id="button" class="topics">Go to main page</p></a>
+<body id="body" class="theme-dark">
+	<header class="title"> 
+		<p class="error-code">404</p>
+		<h1 class="text-center">The page you we're looking for is unable or doesn't exist</h1>
+	</header>
+	<br><br>
+	<section class="text-center">
+		<p>Go to the <a href="https://asterkidev.ml/">Main Page</a></p>
+	</section>
+	<footer class="footer container-fluid">
+		<script type="text/javascript" src="./assets/changetheme.js"></script>
+		<input type="checkbox" onclick="setTheme()" checked="true" id="theme-switch"> Dark Mode
+	</footer>
 </body>
 </html>

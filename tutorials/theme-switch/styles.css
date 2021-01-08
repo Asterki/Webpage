@@ -1,0 +1,78 @@
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" all;
+@import "../../assets/prism.css" all;
+
+.theme-dark {
+    --color: white;
+    --background-color: #1d181c;
+    --header-background-color: #1d181c;
+    --header-color: white;
+    --header-border-color: #c85969;
+    --section-color: white;
+    --section-background-color: #1b161a;
+    --code-background-color: #322931;
+    --code-border-color: black;
+    --footer-background-color: #222;
+}
+
+.theme-light {
+    --color: black;
+    --background-color: white;
+    --header-background-color: #dedede;
+    --header-color: black;
+    --header-border-color: black;
+    --section-color: black;
+    --section-background-color: #dedede;
+    --code-background-color: #322931;
+    --code-border-color: black;
+    --footer-background-color: #dedede;
+}
+
+.test-theme-dark {
+    --test-background-color: black;
+    --test-color: white;
+}
+
+.test-theme-light {
+    --test-color: black;
+    --test-background-color: white;
+}
+
+#test {
+    color: var(--test-color);
+    background-color: var(--test-background-color);
+}
+
+body {
+ 	font-size: 20px;
+    color: var(--color) !important;
+    background-color: var(--background-color) !important;
+}
+
+.header {
+    background-color: var(--header-background-color);
+    color: var(--header-color);
+    border-bottom: 1px solid var(--header-border-color);
+}
+
+.section {
+    padding: 10px;
+    margin-top: 50px;
+    color: var(--section-color);
+    border: 1px solid var(--code-border-color);
+    border-radius: 20px;
+    background-color: var(--section-background-color);
+}
+
+.code {
+    border-radius: 20px;
+	border: 1px solid var(--code-border-color);
+	background-color: var(--code-background-color) !important;
+}
+
+.footer {
+    background-color: var(--footer-background-color);
+    position: fixed;
+    margin-top: 30px;
+    left: 0px;
+    bottom: 0px;
+}

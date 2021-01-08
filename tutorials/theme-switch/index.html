@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./styles.css" rel="stylesheet" type="text/css">
+        <meta charset="utf-8"></meta>
+        <meta name="description" content="Theme Switcher by Asterki.">
+        <meta property="og:title" content="Asterki Website"/>
+        <meta property="og:description" content="Theme Switcher by Asterki"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+            <link href="https://asterkidev.ml/assets/icon.png" rel="icon" type="image/png">
+                <title>
+                    AsterkiDev | Theme Switcher
+                </title>
+            </link>
+        </link>
+    </head>
+    <script src="../../assets/prism.js" type="text/javascript">
+    </script>
+    <body class="theme-dark" id="body">
+        <header class="container-fluid text-center header">
+            <h1>
+                Theme Switcher
+            </h1>
+            <p>
+                This page will teach you how make a theme switcher with JavaScript
+            </p>
+        </header>
+        <section class="container section">
+            <p>
+                FIrst we will need add 2 new classes to our css, those will be the name of the themes, you can add as many new themes as you want, just remember that you will need add a new class for each theme, this time, we will just use 2, a dark mode and a light mode.
+            </p>
+            <div class="code">
+                <code class="language-css">
+                    <script type="text/plain">
+	.theme-dark {
+
+    }
+
+    .theme-light {
+
+	}
+                    </script>
+                </code>
+            </div>
+            <br>
+                <br>
+                    Then, we will need some HTML, we will give the body tag an id, and also a default theme defined by the class name, and that will be the dark theme. also add an checkbox type input, we will give it an id and set it checked because the dark theme is on, also add a onclick event, that will detect when the user clicks the checkbox and change the theme.
+                    <div class="code">
+                        <code class="language-html">
+                            <script type="text/text">
+	<!DOCTYPE html>
+	<html>
+		<head>
+		</head>
+		<body id="body" class="dark-theme">
+			<p>This is a test</p>
+			<input type="checkbox" onclick="setTheme()" checked="true" id="theme-switch"> Dark Mode
+			<script type="text/javascript" src="theme-switch.js">
+		</body>
+	</html>
+                            </script>
+                        </code>
+                    </div>
+                    <br>
+                        <br>
+                            And also, some JavaScript, we will save this in a new file called theme-switch.js
+                            <div class="code">
+                              <code class="language-js">
+	function SetTheme() {
+    	let body = document.getElementById("test");
+    	let checkBox = document.getElementById("test-theme-switch");
+
+  		if (checkBox.checked == true) {
+			body.classList.add("test-theme-dark");
+        	body.classList.remove("test-theme-light");
+      	} else {
+        	body.classList.add("test-theme-light");
+       		body.classList.remove("test-theme-dark");
+		}
+                              </code>
+                            </div>
+                            <br>
+                                <br>
+                                    <p>
+                                        And we're almost done, then comes the hard part, the css
+                                    </p>
+                                    <br>
+                                        <br>
+                                            <p>
+                                                We will just use a text tag for now, but you can use this with any tag
+                                            </p>
+                                            <div class="code">
+                                            	<code class="language-css">
+	.theme-dark {
+		--text-color: white;
+		/* We use the -- to declare a variable, and we're giving the variable "text-color" the property "white" */
+		--background-color;
+	}
+
+	.theme-light {
+		--text-color: black;
+		--background-color: white;
+	}
+
+	/* Then we will need apply the changes */
+
+	body {
+		background-color: var(--background-color);
+		/* And that's how you apply the variables to the properties.
+		color: var(--color);
+	}
+
+												</code>
+                                            </div>
+                                            <br>
+                                                <br>
+                                                    That would make the work, so, test it:
+                                                    <br>
+                                                        <div class="test-theme-dark container" id="test">
+                                                            <p id="text">
+                                                                This is a test
+                                                            </p>
+                                                            <input checked="true" id="test-theme-switch" onclick='
+				function testSetTheme() {
+    			let body = document.getElementById("test");
+    			let checkBox = document.getElementById("test-theme-switch");
+
+  			    if (checkBox.checked == true) {
+					body.classList.add("test-theme-dark");
+        			body.classList.remove("test-theme-light");
+      			} else {
+        			body.classList.add("test-theme-light");
+       				body.classList.remove("test-theme-dark");
+      			}
+			} testSetTheme()' type="checkbox">
+                                                            </input>
+                                                        </div>
+                                                        <p>
+                                                            You can do this on a bigger scale, check the page source for an example.
+                                                        </p><br><br><br>
+                                                        <p>See the full repository on <a href="https://github.com/Asterki/Theme-Switcher">Github</a></p>
+                                                    </br>
+                                                </br>
+                                            </br>
+                                        </br>
+                                    </br>
+                                </br>
+                            </br>
+                        </br>
+                    </br>
+                </br>
+            </br>
+        </section>
+        <div style="margin-bottom: 50px;">
+        </div>
+        <footer class="footer container-fluid">
+            <script type="text/javascript">function setTheme() {
+    			let body = document.getElementById("body");
+    			let checkBox = document.getElementById('theme-switch');
+
+  			    if (checkBox.checked == true) {
+					body.classList.add("theme-dark");
+        			body.classList.remove("theme-light");
+      			} else {
+        			body.classList.add("theme-light");
+       				body.classList.remove("theme-dark");
+      			}
+			}</script>
+            <input checked="true" id="theme-switch" onclick="setTheme()" type="checkbox">
+                Dark Mode
+            </input>
+        </footer>
+    </body>
+</html>

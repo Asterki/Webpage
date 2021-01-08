@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="../../assets/icon.png" rel="icon" type="image/png"/>
+        <meta charset="utf-8"/>
+        <meta content="o8EAEDPndk-7Vuzhxzcy3GEPWZfD0iCClqjW-HyL8Kg" name="google-site-verification"/>
+        <meta content="Asterki Website, nothing more to say." name="description"/>
+        <meta content="Asterki Website" property="og:title"/>
+        <meta content="Node Web Server Tutorial." property="og:description"/>
+        <meta content="../../assets/icon.png" property="og:image"/>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+        <link href="./styles.css" rel="stylesheet" type="text/css"/>
+        <title>
+            AsterkiDev | Node Web Server
+        </title>
+    </head>
+</html>
+<body class="theme-dark" id="body">
+    <script src="../../assets/prism.js" type="text/javascript">
+    </script>
+    <header class="header container-fluid">
+        <h1 class="text-center">
+            Node Web Server
+        </h1>
+    </header>
+    <section class="container section">
+        <p>
+            First of all we will need a server.js file, a file to host, we will call it index.html, and also a 404.html file, because we will make a 404 page.
+        </p>
+        <br/>
+        <p>
+            Our folder should look like this :
+        </p>
+        <div class="code">
+            <code class="language-css">
+    Folder 
+    |--server.js
+    |--index.html
+    |--404.html
+            </code>
+        </div>
+        <br/>
+        <br/>
+        <p>
+            After that, you can add as many things you want into your index.html and 404.html files, afterall those will be the files we will be hosting in our server.
+        </p>
+        <br/>
+        <br/>
+        <p>
+            Then we will go to the server.js file, and we will start the file by declaring the packages that we will user.
+        </p>
+        <div class="code">
+            <code class="language-js">
+    const http = relquire('http');
+    const fs = require('fs');
+            </code>
+        </div>
+        <br><br>
+        <p>Create the server:</p>
+        <div class="code">
+            <code class="language-js">
+    const server = http.createServer(async function (req, res) {
+        // Requests will be handled here
+    }
+            </code>
+        </div>
+        <br><br>
+        <p>So, we start to handling request from the user, but what are requests? Well, according to Google</p><p style="font-family: consolas; letter-spacing: 2px; font-size: 17px; background-color: #322931; color: white;">A web request can also be known as an HTTP request which is the protocol that interacts between the client and the server. A client will type in a URL address prompting the web request to the server. The client or web browser will then connect to the server that it's seeking information and data from.</p>
+        <p>In this case the request will be the url that the user entered, the 2 arguments entered in the server function, req and res (request and response) will be useful, so we will check the request (url) with this code:</p>
+        <div class="code">
+            <code class="language-js">
+    if (req.url == '/') {
+    }
+            </code>
+        </div>
+        <br><br>
+        That will check if the url entered was /, and will be added in the request handler, now we need make a response from the server, like... sending a file, what about the index.html we make in the start of the tutorial? Lets add it, but how? That's when fs comes in, we will make fs read the file and send it on the response, how? with the next code:
+        <div class="code">
+            <code class="language-js">
+    fs.readFile('./index.html', function (err, file) {
+    // Here we read the file and the result will be stored in the "file" variable
+
+        res.write(file); // Here the content will be sent in the request
+        res.end(); // Here ends the request
+    });
+            </code>
+        </div>
+        We will add this piece in the "if" statement <br><br>
+        And then, what if the url a user is requesting is not on the server? Well, that's because we have the 404.html page! 
+        we will add an else statement that if none of the request isn't in the server it will send the 404 page, here is how:
+        <div class="code">
+            <code class="language-js">
+    else {
+        fs.readFile('./404.html', function (err, file) { // We use the same thing we make with fs 
+            res.end(file); 
+        });
+    }
+            </code>
+        </div>
+        <br><br>
+        Well, our code is almost done, we only need our server listen to a server and a way to know when the server is active, this is how:
+        <div class="code">
+            <code class="language-js">
+    server.listen(5000); // Here we make it listens to the 5000 server
+    console.log('Node.js web server is running at port 5000'); // Here alerts when the server is running
+            </code>
+        </div>
+        <br><br>
+        And our code is done, it should look like this:
+        <div class="code">
+            <code class="language-js">
+    const http = require('http');
+    const fs = require('fs');
+
+    const server = http.createServer(async function (req, res) {
+
+    if (req.url == '/') {
+            fs.readFile('./views/index.html', function (err, file) {
+                res.write(file);
+                res.end();
+            });
+        } else {
+            fs.readFile('./views/404.html', function (err, file) {
+                res.end(file);
+            });
+        }
+    });
+
+    server.listen(5000);
+    console.log('Node.js web server at port 5000 is running..');
+            </code>
+        </div>
+        <br><br>
+        <p>You can see the full code in <a href="https://github.com/Asterki/node-web-server">Github</a></p>
+    </section>
+</body>

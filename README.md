@@ -1,1 +1,2 @@
-Hello, if you want go to my website just click [here](http://asterki.ga)
+# website
+This is my website, [Click Here To See It](https://asterkidev.ml)
