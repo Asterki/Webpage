@@ -28,7 +28,7 @@
 }
 
 .test-theme-dark {
-    --test-background-color: black;
+    --test-background-color: #333;
     --test-color: white;
 }
 
