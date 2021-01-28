@@ -1,4 +1,4 @@
-@import "../assets/bootstrap.min.css" all;
+@import "../../assets/css/bootstrap.min.css" all;
 
 .theme-dark {
 	--main-color: white;

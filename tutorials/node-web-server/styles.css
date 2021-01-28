@@ -1,5 +1,5 @@
-@import "../../assets/prism.css" all;
-@import "../../assets/bootstrap.min.css" all;
+@import "../../assets/css/prism.css" all;
+@import "../../assets/css/bootstrap.min.css" all;
 
 .theme-dark {
     --color: white;

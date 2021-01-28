@@ -47,7 +47,7 @@ body {
    filter: opacity(90%);
    padding: 20px;
    background-color: var(--background-color);
-   border: 1px solid var(--header-border-color);
+   border-bottom: 1px solid var(--header-border-color);
    font-family: 'Montserrat', sans-serif;
 }
 
@@ -64,12 +64,13 @@ a:visited {
    text-align: center;
    animation: blink;
    animation-duration: 3s;
-   text-shadow: 1px 1px 2px var(--title-shadow-color);
+   text-shadow: 1px 1px 10px var(--title-shadow-color);
    animation-iteration-count: infinite;
 }
 
 .footer {
    border-top: 1px solid var(--footer-border-color);
+   border-right: 1px solid var(--footer-border-color);
    background-color: var(--footer-background-color);
    position:fixed;
    margin-top: 30px;
